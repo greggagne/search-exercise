@@ -57,56 +57,56 @@ public class TestSearchExercise {
     @Test
     public void testBinarySearchFindsMiddleElement() {
         Integer[] list = {1, 3, 5, 7, 9};
-        assertTrue(SearchExercise.search(list, 5));
+        assertTrue(SearchExercise.binarySearch(list, 5));
     }
 
     @Test
     public void testBinarySearchFindsFirstElement() {
         Integer[] list = {1, 3, 5, 7, 9};
-        assertTrue(SearchExercise.search(list, 1));
+        assertTrue(SearchExercise.binarySearch(list, 1));
     }
 
     @Test
     public void testBinarySearchFindsLastElement() {
         Integer[] list = {1, 3, 5, 7, 9};
-        assertTrue(SearchExercise.search(list, 9));
+        assertTrue(SearchExercise.binarySearch(list, 9));
     }
 
     @Test
     public void testBinarySearchDoesNotFindMissingElement() {
         Integer[] list = {1, 3, 5, 7, 9};
-        assertFalse(SearchExercise.search(list, 4));
+        assertFalse(SearchExercise.binarySearch(list, 4));
     }
 
     @Test
     public void testBinarySearchEmptyArray() {
         Integer[] list = {};
-        assertFalse(SearchExercise.search(list, 10));
+        assertFalse(SearchExercise.binarySearch(list, 10));
     }
 
     @Test
     public void testBinarySearchSingleElementFound() {
         Integer[] list = {42};
-        assertTrue(SearchExercise.search(list, 42));
+        assertTrue(SearchExercise.binarySearch(list, 42));
     }
 
     @Test
     public void testBinarySearchSingleElementNotFound() {
         Integer[] list = {42};
-        assertFalse(SearchExercise.search(list, 5));
+        assertFalse(SearchExercise.binarySearch(list, 5));
     }
 
     @Test
     public void testBinarySearchWithStrings() {
         String[] list = {"apple", "banana", "cherry", "date"};
-        assertTrue(SearchExercise.search(list, "cherry"));
-        assertFalse(SearchExercise.search(list, "orange"));
+        assertTrue(SearchExercise.binarySearch(list, "cherry"));
+        assertFalse(SearchExercise.binarySearch(list, "orange"));
     }
 
     @Test
     public void testBinarySearchWithDuplicateValues() {
         Integer[] list = {1, 2, 2, 2, 3, 4};
-        assertTrue(SearchExercise.search(list, 2));
-        assertFalse(SearchExercise.search(list, 5));
+        assertTrue(SearchExercise.binarySearch(list, 2));
+        assertFalse(SearchExercise.binarySearch(list, 5));
     }
 }

@@ -47,13 +47,13 @@ public class SearchExercise
     */
    private static <T extends Comparable<? super T>> boolean binarySearch(T[] list, int first, int last, T key)
    {
-       // TO-DO Complete the recursive binary search algorithm
+       // TO-DO Complete the binary search algorithm
 
       return false;
    } 
 
     // invokes recursive binary search algorithm.
-   public static <T extends Comparable<? super T>> boolean search(T[] list, T key)
+   public static <T extends Comparable<? super T>> boolean binarySearch(T[] list, T key)
    {
       return binarySearch(list, 0, list.length - 1, key);
    } 
@@ -86,7 +86,7 @@ public class SearchExercise
 
 	// perform the binary search
      for (int i = 0; i < occurrences; i++) {
-       binarySearch(values,0,SIZE-1,searchKeys[i]);
+       binarySearch(values, searchKeys[i]);
      }
 
 	// record the ending time
